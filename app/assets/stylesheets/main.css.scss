@@ -1,0 +1,42 @@
+.header {
+    width: 100%;
+    
+    padding: 10px 20px;
+    background-color: #e1e5fd;
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+    
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+ }
+
+ button {
+    cursor: pointer;
+    padding: 5px 15px;
+    border: 1px solid #a7a7a7;
+    border-radius: 3px;
+    background-color: #bdc7fa;
+ }
+
+ * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+ }
