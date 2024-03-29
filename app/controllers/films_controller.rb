@@ -57,6 +57,9 @@ class FilmsController < ApplicationController
     end
   end
 
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_film
@@ -67,4 +70,6 @@ class FilmsController < ApplicationController
     def film_params
       params.require(:film).permit(:name, :description, :year_of_creation, :director, :length, genres: [])
     end
+
+
 end

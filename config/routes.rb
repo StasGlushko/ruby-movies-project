@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   get "/articles", to: "articles#index"
   # Defines the root path route ("/")
   root "articles#index"
+  resources :films do
+    resources :comments, only: %i[create edit update destroy]
+  end
 end
