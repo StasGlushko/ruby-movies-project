@@ -11,14 +11,13 @@
   <% @film.comments.includes(:user).each do | comment |%>
     <%= turbo_frame_tag(dom_id(comment)) do %>
       <p><%= comment.body %> (by <%= comment.user.email %>) 
-      <% if policy(comment).edit?%>
-        <%= link_to('edit', edit_film_comment_path(comment, film_id: comment.commentable.id)) %>
-      <% end %>
+        <% if policy(comment).edit?%>
+          <%= link_to('edit', edit_film_comment_path(comment, film_id: comment.commentable.id)) %>
+        <% end %>
 
-      <% if policy(comment).destroy?%>
-        <%= link_to('destroy', film_comment_path(comment, film_id: comment.commentable.id), method: :delete, data:  { turbo_method: :delete}) %>
-      <% end %>
-
+        <% if policy(comment).destroy?%>
+          <%= link_to('destroy', film_comment_path(comment, film_id: comment.commentable.id), method: :delete, data:  { turbo_method: :delete}) %>
+        <% end %>
       </p>
     <% end %>
   <% end %>
