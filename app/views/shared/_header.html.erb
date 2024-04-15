@@ -14,6 +14,9 @@
                 <li class="link">
                     <a href='/films'>Films</a>
                 </li>
+                <li class="link">
+                    <%= link_to 'Search', omdb_search_films_path %>
+                </li>
             </ul>
             <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
         </div>

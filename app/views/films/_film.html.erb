@@ -1,4 +1,7 @@
 <div id="<%= dom_id film %>">
+  <% if film.cover_image_url %>
+    <h2><%= image_tag(film.cover_image_url) %></h2>
+  <% end %>
   <p>
     <strong>Name:</strong>
     <%= film.name %>
