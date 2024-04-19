@@ -18,7 +18,7 @@
     <tbody>
     <% @search_results.each do |film| %>
       <tr>
-        <td><%= film['Name'] %></td>
+        <td><%= film['Title'] %></td>
         <td><%= film['Year'] %></td>
         <td><%= image_tag(film['Poster']) %></td>
         <td>

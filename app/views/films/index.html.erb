@@ -2,13 +2,20 @@
 
 <h1>Films</h1>
 
-<div id="films">
+<ul class="films" id="films">
   <% @films.each do |film| %>
-    <%= render film %>
-    <p>
-      <%= link_to "Show this film", film %>
-    </p>
+    <li class="film">
+      <% if film.cover_image_url %>
+        <%= image_tag(film.cover_image_url) %>
+      <% end %>
+      <h3 class="name">
+        <%= film.name %>
+      </h3>
+      <button class="show">
+        <%= link_to "Show this film", film %>
+      </button>
+    </li>
   <% end %>
-</div>
+</ul>
 
 <%= link_to "New film", new_film_path %>

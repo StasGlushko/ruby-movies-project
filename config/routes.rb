@@ -18,4 +18,6 @@ Rails.application.routes.draw do
 
     resources :comments, only: %i[create edit update destroy]
   end
+
+  resource :profile, only: %i[edit update], controller: :profiles
 end

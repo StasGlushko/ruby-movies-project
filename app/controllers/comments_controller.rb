@@ -45,5 +45,6 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:body)
     .merge!(commentable: find_film, user: current_user)
+    
   end
 end
