@@ -1,0 +1,7 @@
+<h1><%= @subject %></h1>
+
+<p> New comment had been created for <%= @film.name %> </p>
+
+<p>
+  <%= link_to('Open film', film_url(@film), target: '_blank') %>
+</p>

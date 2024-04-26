@@ -57,7 +57,7 @@ group :development do
   gem "web-console"
   gem "letter_opener"
   gem "sass-rails"
-
+  gem 'byebug'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
@@ -76,3 +76,4 @@ gem "devise", "~> 4.9"
 
 gem "pundit", "~> 2.3"
 gem "faraday"
+gem 'sidekiq'
